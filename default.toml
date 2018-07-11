@@ -13,10 +13,10 @@ api-port = 8080
 ##
 # ssl configuration
 ##
-# cert-file = "/path/to/ssl/cert.pem"
-# key-file = "/path/to/ssl/key.pem"
-# trusted-ca-file = "/path/to/trusted-certificate-authorities.pem"
-# insecure-skip-tls-verify = false
+cert-file = ""
+key-file = ""
+trusted-ca-file = ""
+insecure-skip-tls-verify = false
 
 ##
 # store configuration

@@ -19,10 +19,16 @@ api-port: {{cfg.api-port}}
 ##
 # ssl configuration
 ##
-# cert-file: "/path/to/ssl/cert.pem"
-# key-file: "/path/to/ssl/key.pem"
-# trusted-ca-file: "/path/to/trusted-certificate-authorities.pem"
-# insecure-skip-tls-verify: false
+{{#if cfg.cert-file ~}}
+cert-file: "{{cfg.cert-file}}"
+{{/if ~}}
+{{#if cfg.key-file ~}}
+key-file: "{{cfg.key-file}}"
+{{/if ~}}
+{{#if cfg.trusted-ca-file ~}}
+trusted-ca-file: "{{cfg.trusted-ca-file}}"
+{{/if ~}}
+insecure-skip-tls-verify: {{cfg.insecure-skip-tls-verify}}
 
 ##
 # store configuration
