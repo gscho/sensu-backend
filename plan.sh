@@ -24,7 +24,7 @@ do_build(){
 }
 
 do_install() {
-  build_line "Copying $pkg_filename binary"
+  build_line "Installing $pkg_filename binary"
   chmod +x $HAB_CACHE_SRC_PATH/$pkg_filename
-  cp -f $HAB_CACHE_SRC_PATH/$pkg_filename $pkg_prefix/bin
+  install -D $HAB_CACHE_SRC_PATH/$pkg_filename $pkg_prefix/bin/$pkg_filename
 }
