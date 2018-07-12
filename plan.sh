@@ -1,4 +1,3 @@
-go_pkg="github.com/sensu/sensu-go"
 pkg_name=sensu-backend
 pkg_filename=sensu-backend
 pkg_origin=gscho
@@ -25,6 +24,7 @@ do_build(){
 }
 
 do_install() {
+  build_line "Copying $pkg_filename binary"
   chmod +x $HAB_CACHE_SRC_PATH/$pkg_filename
   cp -f $HAB_CACHE_SRC_PATH/$pkg_filename $pkg_prefix/bin
 }
