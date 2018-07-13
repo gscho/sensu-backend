@@ -1,5 +1,5 @@
 #!/bin/sh
-CHECK_ADDR="{{sys.ip}}:{{cfg.api-port}}/health"
+CHECK_ADDR="{{cfg.api-host}}:{{cfg.api-port}}/health"
 raw_data="$(curl -o /dev/null --silent --head --write-out '%{http_code}\n' ${CHECK_ADDR})"
 status="$(echo "${raw_data: : -1}" | awk '{print $3}')"
 
